@@ -5,6 +5,7 @@ Case 1:
 Input: 4567
 Expected Output: 2
 
+/*Let's Solve Using Python */
 
 def calculate_difference(number):
     # Convert the number to a string for easy digit extraction
