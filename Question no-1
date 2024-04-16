@@ -1,0 +1,21 @@
+Consider the following series: 1,1,2,3,4,9,8,27,16,81,32,243,64,729,128,2187....
+This series is a mixture of 2 series : all the odd terms in this series form a geometric series and all the even terms form yet another geometric series.
+Write a program to find the Nth term in the series.
+
+Odd Terms (1st, 3rd, 5th, …):
+
+These terms form a geometric series with a common ratio of 2.
+The nth odd term can be expressed as: odd(n)=2(n−1)
+Even Terms (2nd, 4th, 6th, …):
+These terms form another geometric series with a common ratio of 3.
+The nth even term can be expressed as: even(n)=3(n/2−1)
+
+/*Let's Solve using Python*/
+def nth_term(n):
+    if n % 2 == 1:
+        # Odd term
+        return 2**(n // 2)
+    else:
+        # Even term
+        return 3**((n // 2) - 1)
+
