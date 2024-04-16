@@ -1,0 +1,30 @@
+ Write a code to check whether no is prime or not. Condition use function check() to find whether entered no is positive or negative ,if negative then enter the no, And if yes pas no as a parameter to prime() and check whether no is prime or not.
+/*Let's Solve Using Python*/
+import math
+
+def check():
+    while True:
+        num = int(input("Enter a number: "))
+        if num > 0:
+            return num
+        else:
+            print("Please enter a positive number.")
+
+def prime(num):
+    if num <= 1:
+        return False  # 1 and numbers <= 1 are not prime
+    if num == 2:
+        return True   # 2 is a prime number
+
+
+
+def main():
+    number = check()  # Get a positive number from the user
+
+    if prime(number):
+        print(f"{number} is a prime number.")
+    else:
+        print(f"{number} is not a prime number.")
+
+if __name__ == "__main__":
+    main()
